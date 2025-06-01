@@ -1,0 +1,101 @@
+# **Functional Requirements Document (FRD)**
+
+**Project:** Marriage Counselling App
+**Prepared By:** Eben + ChatGPT
+**Date:** 20th May 2025
+
+---
+
+## **1. Overview**
+
+This document outlines the functional requirements for a Marriage Counselling App intended for use within a church system. The app will facilitate a streamlined process from membership verification to official marriage status updates, involving pastors, couples, counsellors, and church admins.
+
+---
+
+## **2. Key Features and Functional Flow**
+
+### **2.1 Member Search and Verification**
+
+* **Function:** Search for existing members in the church database.
+* **Requirements:**
+
+  * The system must connect to the existing church member database.
+  * Users (e.g., pastors or admins) can search individuals by name, ID, or contact.
+  * If a person is not found, they must be registered as a member before proceeding.
+  * At least one individual in the couple must be a registered church member to continue.
+
+### **2.2 Marriage Registration Form**
+
+* **Function:** Initiate the marriage process.
+* **Requirements:**
+
+  * The pastor must complete and submit a digital form for each couple.
+  * Upon submission, the system must generate a unique **Marriage Registration Number (MRN)**.
+  * An automated email containing the MRN must be sent to the couple.
+  * The MRN is required to proceed to medical testing.
+
+### **2.3 Medical Test Process**
+
+* **Function:** Ensure couples complete required health checks.
+* **Requirements:**
+
+  * Couples must undergo medical testing at an affiliated hospital.
+  * The system does **not** store or retain medical results.
+  * Couples use the MRN to confirm test completion and continue to counselling.
+
+### **2.4 Marriage Counselling Process**
+
+* **Function:** Manage and track counselling sessions.
+* **Requirements:**
+
+  * Counselling sessions are linked to the couple’s MRN.
+  * Counsellors must validate the MRN before proceeding.
+  * Multiple counsellors can conduct sessions for one couple.
+  * Counsellors must submit feedback or comments upon completion.
+
+### **2.5 Marriage Ceremony Booking and Payment**
+
+* **Function:** Allow couples to book a wedding date and pay associated fees.
+* **Requirements:**
+
+  * Couples must book a preferred date for their ceremony.
+  * A secure payment gateway must be integrated.
+  * Upon successful payment, the system should mark the status as “Pending Marriage.”
+  * After the ceremony, an admin updates the status to “Married.”
+
+### **2.6 Role-Based Access and Permissions**
+
+* **Function:** Control access to system features based on roles.
+* **Roles:**
+
+  * **Bishop:** Full access, including approvals and oversight.
+  * **Admin:** Access to all operational functions (search, registration, payment, updates).
+  * **Front-Office Admin:** Limited to data entry and basic management tasks.
+* **Requirements:**
+
+  * Each role must only access authorized parts of the system.
+  * Role-specific dashboards and functionalities must be implemented.
+
+### **2.7 User Authentication**
+
+* **Function:** Provide secure, centralized login and access control.
+* **Requirements:**
+
+  * A central authentication service will manage logins across all roles.
+  * Authentication must include password encryption and user session handling.
+  * Further specifications for this will be defined later.
+
+---
+
+## **3. Future Considerations**
+
+* Integration with hospital systems to auto-confirm test completion (optional).
+* Notification and reminder system for counselling and bookings.
+* Dashboard analytics for church leadership.
+
+---
+
+## **4. To-Do / Next Steps**
+
+* Robert to begin wireframe design of the app.
+* Rev. to provide further technical and process-specific details.
